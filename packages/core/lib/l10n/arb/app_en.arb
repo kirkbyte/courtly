@@ -1,0 +1,87 @@
+{
+  "@@locale": "en",
+  "appTitle": "Courtly",
+  "loginTitle": "Welcome to Courtly",
+  "loginSubtitle": "Book tennis and padel courts in seconds",
+  "loginNameHint": "Your name",
+  "loginNameEmpty": "Enter your name to continue",
+  "loginButton": "Continue",
+  "catalogTitle": "Clubs",
+  "catalogEmpty": "No clubs match your filters",
+  "filtersTitle": "Filters",
+  "filterSurface": "Surface",
+  "filterCourtType": "Court type",
+  "filterPlacement": "Placement",
+  "filterAll": "All",
+  "filterApply": "Apply",
+  "filterReset": "Reset",
+  "surfaceHard": "Hard",
+  "surfaceClay": "Clay",
+  "surfaceGrass": "Grass",
+  "courtTypeTennis": "Tennis",
+  "courtTypePadel": "Padel",
+  "placementIndoor": "Indoor",
+  "placementOutdoor": "Outdoor",
+  "errorTitle": "Something went wrong",
+  "errorRetry": "Retry",
+  "clubCourtsTitle": "Courts",
+  "perHour": "{price}/hr",
+  "@perHour": {
+    "placeholders": {
+      "price": {"type": "String"}
+    }
+  },
+  "slotGridTitle": "Pick a time",
+  "slotGridEmpty": "No available slots on this day",
+  "duration": "Duration",
+  "durationHours": "{count, plural, one {{count} hour} other {{count} hours}}",
+  "@durationHours": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "confirmBookingTitle": "Confirm booking",
+  "total": "Total",
+  "confirmBookingButton": "Book now",
+  "bookingCreated": "Booking confirmed",
+  "bookingsTitle": "My bookings",
+  "bookingsTabActive": "Active",
+  "bookingsTabHistory": "History",
+  "bookingsEmptyActive": "No bookings yet\nBook a court to see it here",
+  "bookingsEmptyHistory": "Past and cancelled bookings will appear here",
+  "bookingCancel": "Cancel booking",
+  "cancelConfirmTitle": "Cancel this booking?",
+  "cancelConfirmMessage": "{court} at {club} · {when}",
+  "@cancelConfirmMessage": {
+    "placeholders": {
+      "court": {"type": "String"},
+      "club": {"type": "String"},
+      "when": {"type": "String"}
+    }
+  },
+  "cancelKeep": "Keep booking",
+  "cancelConfirm": "Cancel booking",
+  "statusCancelled": "Cancelled",
+  "profileTitle": "Profile",
+  "profileDarkTheme": "Dark theme",
+  "profileLanguage": "Language",
+  "profileLogout": "Log out",
+  "profileEditProfile": "Edit profile",
+  "profilePayments": "Payment methods",
+  "profileNotifications": "Notifications",
+  "profileHelp": "Help & support",
+  "profileDeleteAccount": "Delete account",
+  "profileStubNotAvailable": "Not part of this demo",
+  "editProfileTitle": "Edit profile",
+  "editProfileSave": "Save",
+  "deleteAccountConfirmTitle": "Delete account?",
+  "deleteAccountConfirmMessage": "This removes your session and all bookings on this device.",
+  "deleteAccountConfirm": "Yes, delete",
+  "deleteAccountKeep": "Keep account",
+  "ratingLabel": "★ {rating}",
+  "@ratingLabel": {
+    "placeholders": {
+      "rating": {"type": "String"}
+    }
+  }
+}
