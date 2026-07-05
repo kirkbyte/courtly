@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # Resolving any workspace member resolves the whole workspace.
+      - name: Resolve workspace
+        run: flutter pub get
+        working-directory: apps/client
+
+      # Generated code (*.g.dart, *.tailor.dart) is gitignored, so CI
+      # regenerates it before analyzing or testing.
+      - name: Generate l10n (core)
+        run: flutter gen-l10n
+        working-directory: packages/core
+      - name: Generate theme tokens (core)
+        run: dart run build_runner build --delete-conflicting-outputs
+        working-directory: packages/core
+      - name: Generate riverpod providers (client)
+        run: dart run build_runner build --delete-conflicting-outputs
+        working-directory: apps/client
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test api package
+        run: dart test
+        working-directory: packages/api
+      - name: Test core package
+        run: flutter test
+        working-directory: packages/core
+      - name: Test client app
+        run: flutter test
+        working-directory: apps/client
