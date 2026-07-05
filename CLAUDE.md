@@ -5,20 +5,22 @@ Riverpod discipline, token-based design system, fake data by design.
 
 ## Current status (2026-07-05)
 
-- Design approved and written to
-  `docs/superpowers/specs/2026-07-04-courtly-design.md` — **read it first**.
-- Workspace skeleton scaffolded by the user (root pubspec workspace,
-  `apps/client`, `packages/core`, `packages/api`, LICENSE, README,
-  .gitignore, .vscode/launch.json). No feature code yet.
-- **Next step:** superpowers `writing-plans` skill to turn the spec into an
-  implementation plan, then implement it step by step.
+- v1.0 feature-complete: pseudo-login, club catalog with filters, booking
+  flow (club → courts → day → slot grid → confirmation), my bookings with
+  cancellation, profile (theme, language, notifications, rename, delete
+  account). CI (analyze + tests) runs on GitHub Actions; generated code
+  (`*.g.dart`, `*.tailor.dart`, l10n) is gitignored and rebuilt by codegen.
+- Design source of truth: theme_tailor tokens in
+  `packages/core/lib/src/theme/` — change palette/typography there only.
+- Known gaps: Inter font not yet bundled (hook: `_fontFamily` in
+  `app_text_styles.dart`), README lacks screenshots and a booking-flow GIF.
 
 ## Hard rules
 
 - **No code copied from any other project.** This repo must stand alone;
   patterns and practices only, never source.
-- Planned workspace: `apps/client` + `packages/core` (theme, tokens, l10n
-  en/ru, shared widgets) + `packages/api` (abstract `*Api` contracts + fake
+- Workspace: `apps/client` + `packages/core` (theme, tokens, l10n en/ru,
+  shared widgets) + `packages/api` (abstract `*Api` contracts + fake
   implementations with seed data).
 - Layers: FakeApi → Repository (+ LocalDatasource for shared_preferences) →
   domain (pure Dart rules) → Riverpod notifiers → UI. Business rules live in
