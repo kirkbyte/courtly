@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "client",
+      "cwd": "apps/client",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "client (profile mode)",
+      "cwd": "apps/client",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "client (release mode)",
+      "cwd": "apps/client",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}

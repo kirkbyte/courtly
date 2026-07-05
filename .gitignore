@@ -1,0 +1,62 @@
+# NOTE: unlike a typical private-project setup, CLAUDE.md, docs/ and
+# packages/api/lib/ are intentionally tracked — they carry the project
+# context (spec, handoff notes) and hand-written api contracts/fakes.
+
+# Dart / pub
+.dart_tool/
+**/.dart_tool/
+build/
+**/build/
+**/pubspec.lock
+pubspec_overrides.yaml
+**/doc/api/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+**/flutter_export_environment.sh
+
+# Codegen output — rebuilt by `dart run build_runner build`; CI runs it too
+*.g.dart
+*.freezed.dart
+*.tailor.dart
+**/generated/*
+packages/core/lib/l10n/gen/
+
+# Claude Code — only local/private state
+.claude/settings.local.json
+
+# IDE — track shared launch config, ignore personal settings
+.idea/
+*.iml
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Android
+**/android/**/gradle-wrapper.jar
+**/android/.gradle/
+**/android/captures/
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+key.properties
+**/*.jks
+**/*.keystore
+
+# iOS / macOS
+**/ios/.generated/
+**/ios/.build/
+**/ios/Pods/
+**/ios/Runner/GeneratedPluginRegistrant.h
+**/ios/Runner/GeneratedPluginRegistrant.m
+**/ios/.symlinks/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_assets/
+**/xcuserdata/
+**/DerivedData/
+
+# Misc
+.DS_Store
+*.log
+*.swp
+.history
